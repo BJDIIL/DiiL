@@ -1,4 +1,6 @@
-﻿using System;
+﻿using diil.web.Services.Interface;
+using log4net;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,10 +11,29 @@ namespace diil.web.Controllers
 {
     public class ValuesController : ApiController
     {
+        private IService _service;
+        ILog _log;
+
+        //log.Info(DateTime.Now.ToString() + ": login success");//写入一条新log
+        public ValuesController(IService service, ILog log)
+        {
+            this._service = service;
+            this._log = log;
+        }
         // GET api/values
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            try
+            {
+                this._log.Info("test log4net autofac IoC");
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+            
+            return new string[] { "value1", "value2", _service.Say("刘帅") };
         }
 
         // GET api/values/5
