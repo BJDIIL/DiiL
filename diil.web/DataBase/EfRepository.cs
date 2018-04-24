@@ -27,6 +27,7 @@ namespace diil.web.DataBase
         public EfRepository(IDbContext context)
         {
             this._context = context;
+            this._entities = this._context.Set<T>();
         }
 
         #endregion
