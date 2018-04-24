@@ -1,0 +1,1 @@
+2018-04-24 17:53:03,630 [268] INFO  diil.web.Controllers.ValuesController [(null)] - test log4net autofac IoC

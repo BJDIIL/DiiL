@@ -8,10 +8,11 @@ namespace diil.web.Domain
 {
     public partial class Article : BaseEntity
     {
-        public Guid Id { get; set; }
+        public Guid ArticleId { get; set; }
         public string Content { get; set; }
         public Guid UserId { get; set; }
         public DateTime CreateTime { get; set; }
         public string Title { get; set; }
+        public int Status { get; set; }
     }
 }

@@ -1,12 +1,13 @@
-﻿using System;
+﻿using diil.web.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
 namespace diil.web.Services.Interface
 {
-    public interface IService
+    public interface IArticleService
     {
-        string Say(string p);
+        Article GetArticleById(int articleId);
     }
 }

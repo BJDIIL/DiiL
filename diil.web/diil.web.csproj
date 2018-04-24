@@ -795,10 +795,11 @@
     </Compile>
     <Compile Include="LoggingModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\Imp\Service.cs" />
-    <Compile Include="Services\Interface\IService.cs" />
+    <Compile Include="Services\Imp\ArticleService.cs" />
+    <Compile Include="Services\Interface\IArticleService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Install\create_database_structure.sql" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -1183,7 +1184,6 @@
     <Content Include="Scripts\popper-utils.js.map" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

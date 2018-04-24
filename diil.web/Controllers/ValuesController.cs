@@ -11,11 +11,9 @@ namespace diil.web.Controllers
 {
     public class ValuesController : ApiController
     {
-        private IService _service;
+        private IArticleService _service;
         ILog _log;
-
-        //log.Info(DateTime.Now.ToString() + ": login success");//写入一条新log
-        public ValuesController(IService service, ILog log)
+        public ValuesController(IArticleService service, ILog log)
         {
             this._service = service;
             this._log = log;
@@ -23,17 +21,9 @@ namespace diil.web.Controllers
         // GET api/values
         public IEnumerable<string> Get()
         {
-            try
-            {
-                this._log.Info("test log4net autofac IoC");
-            }
-            catch (Exception ex)
-            {
+            this._log.Info(_service.GetArticleById(1));
 
-                throw;
-            }
-            
-            return new string[] { "value1", "value2", _service.Say("刘帅") };
+            return new string[] { "value1", "value2", };
         }
 
         // GET api/values/5

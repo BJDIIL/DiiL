@@ -39,7 +39,7 @@ namespace diil.web
             builder.RegisterWebApiModelBinderProvider();
 
             //Services
-            builder.RegisterType<Service>().As<IService>().InstancePerDependency();
+            builder.RegisterType<ArticleService>().As<IArticleService>().InstancePerDependency();
 
             // 注册Autofac Module
             builder.RegisterModule(new LoggingModule());
