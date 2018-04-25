@@ -794,6 +794,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="LoggingModule.cs" />
+    <Compile Include="Mapping\Articles\ArticleMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Imp\ArticleService.cs" />
     <Compile Include="Services\Interface\IArticleService.cs" />
