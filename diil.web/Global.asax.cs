@@ -1,9 +1,9 @@
 ﻿using Autofac;
 using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
-using diil.web.DataBase;
-using diil.web.Services.Imp;
-using diil.web.Services.Interface;
+using DiiL.Core.Data;
+using DiiL.Data;
+using DiiL.Services.Articles;
 using System.Configuration;
 using System.Reflection;
 using System.Web.Http;
@@ -49,7 +49,7 @@ namespace diil.web
             builder.Register<IDbContext>(c => new DIILContext(connectionString)).InstancePerLifetimeScope();
             //repositories
             builder.RegisterGeneric(typeof(EfRepository<>)).As(typeof(IRepository<>)).InstancePerLifetimeScope();
-
+            
             var container = builder.Build();
 
             // WebApiResolver

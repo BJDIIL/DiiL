@@ -1,11 +1,7 @@
-﻿using diil.web.Services.Interface;
+﻿using DiiL.Services.Articles;
 using log4net;
 using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace diil.web.Controllers
@@ -22,10 +18,10 @@ namespace diil.web.Controllers
         // GET api/values
         public IEnumerable<string> Get()
         {
-            var article = this._service.GetArticleById(1);
-            this._log.Info(article);
+            var articles = this._service.SearchArticles();
+            this._log.Info(articles);
 
-            return new string[] { "value1", "value2", JsonConvert.SerializeObject(article) };
+            return new string[] { "value1", "value2", JsonConvert.SerializeObject(articles) };
         }
 
         // GET api/values/5
