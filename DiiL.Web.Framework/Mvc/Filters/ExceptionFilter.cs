@@ -25,7 +25,7 @@ namespace DiiL.Web.Framework.Mvc.Filters
             /*  
              * 在派生类重写时,设置或者重写一个值该值指定是否禁用ISS7.0中自定义错误 
               */
-            filterContext.HttpContext.Response.TrySkipIisCustomErrors = true;
+            //filterContext.HttpContext.Response.TrySkipIisCustomErrors = true;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using DiiL.Services.Articles;
+﻿using DiiL.Core.Extensions;
+using DiiL.Services.Articles;
 using log4net;
 using System;
 using System.Collections.Generic;
@@ -17,11 +18,12 @@ namespace diil.web.Controllers
             this._service = service;
             this._log = log;
         }
+
+        [OutputCache(Duration = 10)]
         public ActionResult Index()
         {
-            var articles = this._service.SearchArticles();
-            this._log.Info(articles);
             ViewBag.Title = "Home Page";
+            Response.Write("487".ToCapitalRMB());
 
             return View();
         }

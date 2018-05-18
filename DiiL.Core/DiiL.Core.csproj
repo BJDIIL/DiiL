@@ -42,7 +42,8 @@
   <ItemGroup>
     <Compile Include="BaseEntity.cs" />
     <Compile Include="Data\IRepository.cs" />
-    <Compile Include="Domain\Article.cs" />
+    <Compile Include="Domain\Articles\Article.cs" />
+    <Compile Include="Extensions\NumberExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

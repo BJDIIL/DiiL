@@ -1,7 +1,6 @@
-﻿using DiiL.Core;
-using DiiL.Core.Data;
+﻿using DiiL.Core.Data;
+using DiiL.Core.Domain.Articles;
 using PagedList;
-using System;
 
 namespace DiiL.Services.Articles
 {
@@ -28,7 +27,6 @@ namespace DiiL.Services.Articles
 
         public IPagedList<Article> SearchArticles()
         {
-            throw new Exception("测试 ExceptionFilter");
             return new PagedList<Article>(this._articleRepository.Table, 10, 1);
         }
     }
