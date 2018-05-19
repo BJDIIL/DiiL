@@ -23,6 +23,8 @@ namespace diil.web.Controllers
             this._log.Info(articles);
             ViewBag.Title = "Home Page";
 
+            
+
             return View();
         }
     }
