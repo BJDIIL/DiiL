@@ -26,6 +26,8 @@ namespace diil.web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
+            //ImageResizer
+            //new PluginName().Install(ImageResizer.Configuration.Config.Current);
             #region IoC
             // 文档参考 http://autofaccn.readthedocs.io/zh/latest/getting-started/index.html
             var builder = new ContainerBuilder();

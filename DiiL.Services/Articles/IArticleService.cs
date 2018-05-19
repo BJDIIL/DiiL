@@ -1,4 +1,4 @@
-﻿using DiiL.Core;
+﻿using DiiL.Core.Domain.Articles;
 using PagedList;
 
 namespace DiiL.Services.Articles

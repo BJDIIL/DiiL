@@ -1,4 +1,4 @@
-﻿using DiiL.Core;
+﻿using DiiL.Core.Domain.Articles;
 using System.Data.Entity.ModelConfiguration;
 
 namespace DiiL.Data.Mapping.Articles
