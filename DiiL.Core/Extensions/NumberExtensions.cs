@@ -8,12 +8,13 @@ namespace DiiL.Core.Extensions
 {
     public static class NumberExtensions
     {
-        /// <summary>
-        /// 将数字转化为人民币大写
-        /// </summary>
-        /// <param name="num"></param>
-        /// <returns></returns>
-        public static string ToRMB(decimal num)
+
+        public static string ToCapitalRMB(this string num)
+        {
+            return ToCapitalRMB(Convert.ToDecimal(num));
+        }
+
+        public static string ToCapitalRMB(this decimal num)
         {
             string str1 = "零壹贰叁肆伍陆柒捌玖";            //0-9所对应的汉字
             string str2 = "万仟佰拾亿仟佰拾万仟佰拾元角分"; //数字位所对应的汉字
@@ -123,21 +124,6 @@ namespace DiiL.Core.Extensions
                 str5 = "零元整";
             }
             return str5;
-        }
-
-        public static string ToRMB(string num)
-        {
-            return ToRMB(Convert.ToDecimal(num));
-        }
-
-        public static string ToCapitalRMB(this string num)
-        {
-            return ToRMB(num);
-        }
-
-        public static string ToCapitalRMB(this decimal num)
-        {
-            return ToRMB(num);
         }
     }
 }
